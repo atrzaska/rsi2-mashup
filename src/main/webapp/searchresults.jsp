@@ -27,6 +27,41 @@
 <h1 class="title">Welcome To Our Website</h1>
 <p>
     
+<div id="content">
+    <br>
+<div id="eventdetails">
+<div>Tytul: abcde</div>
+<div>Opis: qwe</div>
+<div>Czas rozpoczęcia: qwe</div>
+<div>Kraj: qwe</div>
+<div>Miasto: qwe</div>
+<div>Adres: qwe</div>
+<div>Nazwa miejsca: qwe</div>
+</div>
+    </br>
+    <br>
+<div id="eventdetails">
+<div>Tytul: abcde</div>
+<div>Opis: qwe</div>
+<div>Czas rozpoczęcia: qwe</div>
+<div>Kraj: qwe</div>
+<div>Miasto: qwe</div>
+<div>Adres: qwe</div>
+<div>Nazwa miejsca: qwe</div>
+</div>
+    </br>
+    <br>
+<div id="eventdetails">
+<div>Tytul: abcde</div>
+<div>Opis: qwe</div>
+<div>Czas rozpoczęcia: qwe</div>
+<div>Kraj: qwe</div>
+<div>Miasto: qwe</div>
+<div>Adres: qwe</div>
+<div>Nazwa miejsca: qwe</div>
+</div>
+    </br>
+</div>
 </p>
 </div>
 </div>
