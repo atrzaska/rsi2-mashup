@@ -29,23 +29,20 @@
                       <li><a href="eventdetails.jsp">EVENTDETAILS</a></li>
                       <li><a href="searchresults.jsp">SEARCHRESULTS</a></li>
                     </ul>
-                </div>
+                </div> <!-- .leftpanel -->
 
                 <div class="rightpanel">
-                <h1 class="title">Welcome To Our Website</h1>
-                <p>
-                    stuff
-                </p>
-                </div>
-            </div>
+                    <h1 class="title">Welcome To Our Website</h1>
+                </div> <!-- .rightpanel -->
+            </div> <!-- #content -->
             <!--DO NOT Remove The Footer Links-->
             <div class="footer">&copy; 2010 zajevents.com Designed by <a
                 class="footer-link" target="_blank"
                 href="http://www.htmltemplates.net/">htmltemplates.net</a>
                <!--DO NOT Remove The Footer Links-->
-            </div>
-        </div>
-    </div>
+            </div> <!-- .footer -->
+        </div> <!-- #page -->
+    </div> <!-- #main -->
 
     <!-- Le Javascripts -->
 

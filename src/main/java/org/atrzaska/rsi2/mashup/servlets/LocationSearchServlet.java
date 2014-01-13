@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "KeywordSearch", urlPatterns = {"/KeywordSearch"})
-public class KeywordSearchServlet1 extends HttpServlet {
+@WebServlet(name = "LocationSearchServlet", urlPatterns = {"/LocationSearch"})
+public class LocationSearchServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
