@@ -25,9 +25,8 @@
                 <div class="leftpanel">
                     <h2>Main Menu</h2>
                     <ul>
-                      <li style="border-top: medium none;"><a href="index.jsp">INDEX</a></li>
-                      <li><a href="eventdetails.jsp">EVENTDETAILS</a></li>
-                      <li><a href="searchresults.jsp">SEARCHRESULTS</a></li>
+                        <li style="border-top: medium none;"><a href="index.jsp">Strona główna</a></li>
+                        <li><a href="popular.jsp">Popularne wydarzenia</a></li>
                     </ul>
                 </div> <!-- .leftpanel -->
 
