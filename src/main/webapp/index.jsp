@@ -29,10 +29,35 @@
                         <li><a href="popularEvents">Popularne wydarzenia</a></li>
                         <li><a href="eventsNearYou">Wydarzenia w twoim regionie</a></li>
                     </ul>
+                    <br/>
+                    <form action="" method="GET">
+                        <div>
+                            Wyszukaj po miejscomości: 
+                            <br/>
+                            <input type="text" name="miejscowosc" />
+                            <br/>     
+                            <input type="submit" />
+                        </div>
+                        </form>
+                    <br/>
+                    <form action="" method="GET">
+                        <div>
+                            Wyszukaj po słowach kluczowych 
+                            <br/>
+                            <input type="text" name="slowa_kluczowe" />
+                            <br/>     
+                            <input type="submit" />
+                        </div>
+                        </form>
                 </div> <!-- .leftpanel -->
+                
 
                 <div class="rightpanel">
-                    <h1 class="title">Welcome To Our Website</h1>
+                    
+                    
+                        
+                    
+                   
                 </div> <!-- .rightpanel -->
             </div> <!-- #content -->
             <!--DO NOT Remove The Footer Links-->
