@@ -1,12 +1,5 @@
 package org.atrzaska.rsi2.mashup.servlets;
 
-import org.atrzaska.rsi2.mashup.string.ConvertLineEndingsTransform;
-import org.atrzaska.rsi2.mashup.string.ConvertPolishCharactersTransform;
-import org.atrzaska.rsi2.mashup.string.ConvertWhitespaceTransform;
-import org.atrzaska.rsi2.mashup.string.LowerCaseTransform;
-import org.atrzaska.rsi2.mashup.string.RemoveExtraSpacesTransform;
-import org.atrzaska.rsi2.mashup.string.RemoveSpecialCharactersTransform;
-import org.atrzaska.rsi2.mashup.string.StringProcessor;
 import com.evdb.javaapi.EVDBAPIException;
 import com.evdb.javaapi.EVDBRuntimeException;
 import com.evdb.javaapi.data.Event;
@@ -23,6 +16,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.atrzaska.rsi2.mashup.string.ConvertLineEndingsTransform;
+import org.atrzaska.rsi2.mashup.string.ConvertPolishCharactersTransform;
+import org.atrzaska.rsi2.mashup.string.ConvertWhitespaceTransform;
+import org.atrzaska.rsi2.mashup.string.LowerCaseTransform;
+import org.atrzaska.rsi2.mashup.string.RemoveExtraSpacesTransform;
+import org.atrzaska.rsi2.mashup.string.RemoveSpecialCharactersTransform;
+import org.atrzaska.rsi2.mashup.string.StringProcessor;
 
 @WebServlet(name = "KeywordSearch", urlPatterns = {"/keywordSearch"})
 public class KeywordSearchServlet extends HttpServlet {

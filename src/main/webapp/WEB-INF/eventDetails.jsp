@@ -58,7 +58,7 @@
                             <div>Nazwa miejsca: ${event.venueName}</div>
                             <div id="event_pictures">
                                 <c:forEach var="image" items="${event.images}">
-                                    <img src="${image.url}" height="200" width="200"/>
+                                    <img id="event-thumbnail" src="${image.url}" height="200" width="200"/>
                                 </c:forEach>
                             </div>
                             <div>Opis: ${event.description}</div>
@@ -92,6 +92,7 @@
     <script>
         $(function() {
             var latlng = new google.maps.LatLng(${event.venueLatitude}, ${event.venueLongitude});
+
             var myOptions = {
                 zoom: 15,
                 center: latlng,
