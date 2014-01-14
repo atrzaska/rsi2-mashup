@@ -20,13 +20,14 @@
 <body>
     <div class="main">
         <div class="page">
-            <div class="header"><img src="images/header.jpg" alt="" height="304" width="998"/></div>
+            <div class="header"><img src="res/header.jpg" alt="" height="304" width="998"/></div>
             <div class="content">
                 <div class="leftpanel">
                     <h2>Main Menu</h2>
                     <ul>
                         <li style="border-top: medium none;"><a href="index.jsp">Strona główna</a></li>
-                        <li><a href="popular.jsp">Popularne wydarzenia</a></li>
+                        <li><a href="popularEvents">Popularne wydarzenia</a></li>
+                        <li><a href="eventsNearYou">Wydarzenia w twoim regionie</a></li>
                     </ul>
                 </div> <!-- .leftpanel -->
 

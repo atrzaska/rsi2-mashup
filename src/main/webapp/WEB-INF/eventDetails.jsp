@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,13 +21,14 @@
 <body>
     <div class="main">
         <div class="page">
-            <div class="header"><img src="images/header.jpg" alt="" height="304" width="998"/></div>
+            <div class="header"><img src="res/header.jpg" alt="" height="304" width="998"/></div>
             <div class="content">
                 <div class="leftpanel">
                     <h2>Main Menu</h2>
                     <ul>
                         <li style="border-top: medium none;"><a href="index.jsp">Strona główna</a></li>
-                        <li><a href="popular.jsp">Popularne wydarzenia</a></li>
+                        <li><a href="popularEvents">Popularne wydarzenia</a></li>
+                        <li><a href="eventsNearYou">Wydarzenia w twoim regionie</a></li>
                     </ul>
                 </div> <!-- .leftpanel -->
 
@@ -35,17 +37,27 @@
                     <h1 class="title">Welcome To Our Website</h1>
                     <div id="content">
                         <br>
-                        <img src="images/youtube.png"/>
+                        <img src="res/youtube.png"/>
                         </br>
                         <br>
                         <div id="eventdetails">
-                            <div>Tytul: abcde</div>
-                            <div>Opis: qwe</div>
-                            <div>Czas rozpoczęcia: qwe</div>
-                            <div>Kraj: qwe</div>
-                            <div>Miasto: qwe</div>
-                            <div>Adres: qwe</div>
-                            <div>Nazwa miejsca: qwe</div>
+                            <div>Tytul: ${event.title}</div>
+                            <div>Opis: ${event.description}</div>
+                            <div>Wystąpią:
+                                <c:forEach var="performer" items="${event.performers}">
+                                    ${performer.name}<br />
+                                </c:forEach>
+                            </div>
+                            <div>Czas rozpoczęcia: ${event.startTime}</div>
+                            <div>Kraj: ${event.venueCountry}</div>
+                            <div>Miasto: ${event.venueCity}</div>
+                            <div>Adres: ${event.venueAddress}</div>
+                            <div>Nazwa miejsca: ${event.venueName}</div>
+                            <div id="event_pictures">
+                                <c:forEach var="image" items="${event.images}">
+                                    <img src="${image.url}" height="200" width="200"/>
+                                </c:forEach>
+                            </div>
                         </div>
                         </br>
                     </div>
