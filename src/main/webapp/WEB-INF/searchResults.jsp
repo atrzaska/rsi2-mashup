@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,44 +33,23 @@
                 </div> <!-- .leftpanel -->
 
                 <div class="rightpanel">
-                    <h1 class="title">Welcome To Our Website</h1>
+                    <h1 class="title">Wyniki wyszukiwania</h1>
 
-                    <div id="content">
+                    <c:forEach var="event" items="${events}">
                         <div id="eventdetails">
-                        <div>Tytul: abcde</div>
-                        <div>Opis: qwe</div>
-                        <div>Czas rozpoczęcia: qwe</div>
-                        <div>Kraj: qwe</div>
-                        <div>Miasto: qwe</div>
-                        <div>Adres: qwe</div>
-                        <div>Nazwa miejsca: qwe</div>
+                            <div>Tytuł: <a href="eventDetails?seid=${event.seid}">${event.title}</a></div>
+                            <div>Wystąpią:
+                                <c:forEach var="performer" items="${event.performers}">
+                                    ${performer.name}<br />
+                                </c:forEach>
+                            </div>
+                            <div>Czas rozpoczęcia: ${event.startTime}</div>
+                            <div>Kraj: ${event.venueCountry}</div>
+                            <div>Miasto: ${event.venueCity}</div>
+                            <div>Adres: ${event.venueAddress}</div>
+                            <div>Nazwa miejsca: ${event.venueName}</div>
                         </div>
-                        </br>
-                        </br>
-
-                        <div id="eventdetails">
-                        <div>Tytul: abcde</div>
-                        <div>Opis: qwe</div>
-                        <div>Czas rozpoczęcia: qwe</div>
-                        <div>Kraj: qwe</div>
-                        <div>Miasto: qwe</div>
-                        <div>Adres: qwe</div>
-                        <div>Nazwa miejsca: qwe</div>
-                        </div>
-                        </br>
-                        </br>
-
-                        <div id="eventdetails">
-                        <div>Tytul: abcde</div>
-                        <div>Opis: qwe</div>
-                        <div>Czas rozpoczęcia: qwe</div>
-                        <div>Kraj: qwe</div>
-                        <div>Miasto: qwe</div>
-                        <div>Adres: qwe</div>
-                        <div>Nazwa miejsca: qwe</div>
-                        </div>
-                        </br>
-                    </div>
+                    </c:forEach>
                 </div> <!-- .rightpanel -->
             </div> <!-- #content -->
             <!--DO NOT Remove The Footer Links-->

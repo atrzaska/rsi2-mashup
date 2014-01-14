@@ -37,12 +37,15 @@
                     <h1 class="title">Welcome To Our Website</h1>
                     <div id="content">
                         <br>
-                        <img src="res/youtube.png"/>
+                        <div id="yt-player">
+                            <img src="res/youtube.png"/>
+                        </div>
+                        <div id="mapcanvas">
+                        </div>
                         </br>
                         <br>
                         <div id="eventdetails">
-                            <div>Tytul: ${event.title}</div>
-                            <div>Opis: ${event.description}</div>
+                            <div>Tytuł: ${event.title}</div>
                             <div>Wystąpią:
                                 <c:forEach var="performer" items="${event.performers}">
                                     ${performer.name}<br />
@@ -58,6 +61,7 @@
                                     <img src="${image.url}" height="200" width="200"/>
                                 </c:forEach>
                             </div>
+                            <div>Opis: ${event.description}</div>
                         </div>
                         </br>
                     </div>
@@ -84,5 +88,26 @@
     <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/slimbox2.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script>
+        $(function() {
+            var latlng = new google.maps.LatLng(${event.venueLatitude}, ${event.venueLongitude});
+            var myOptions = {
+                zoom: 15,
+                center: latlng,
+                mapTypeControl: false,
+                navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+
+            var map = new google.maps.Map(document.getElementById("mapcanvas"), myOptions);
+
+            var marker = new google.maps.Marker({
+                position: latlng,
+                map: map,
+                title:"You are here!"
+            });
+        });
+    </script>
 </body>
 </html>
