@@ -29,14 +29,19 @@
                         <li><a href="popularEvents">Popularne wydarzenia</a></li>
                         <li><a href="eventsNearYou">Wydarzenia w twoim regionie</a></li>
                     </ul>
+                    
+                </div> <!-- .leftpanel -->
+                
+
+                <div class="rightpanel">
                     <br/>
                     <form action="" method="GET">
                         <div>
                             Wyszukaj po miejscomości: 
                             <br/>
-                            <input type="text" name="miejscowosc" />
+                            <input id="s" type="text" name="miejscowosc" /><input value="Szukaj" type="submit" />
                             <br/>     
-                            <input type="submit" />
+                            
                         </div>
                         </form>
                     <br/>
@@ -44,16 +49,11 @@
                         <div>
                             Wyszukaj po słowach kluczowych 
                             <br/>
-                            <input type="text" name="slowa_kluczowe" />
+                            <input id="s" type="text" name="slowa_kluczowe" /><input value="Szukaj" type="submit" />
                             <br/>     
-                            <input type="submit" />
+                            
                         </div>
                         </form>
-                </div> <!-- .leftpanel -->
-                
-
-                <div class="rightpanel">
-                    
                     
                         
                     
