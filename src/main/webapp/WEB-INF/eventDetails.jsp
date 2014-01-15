@@ -34,16 +34,24 @@
 
                 <div class="rightpanel">
 
-                    <h1 class="title">Welcome To Our Website</h1>
+                    <h1 class="title">Szczegóły dla ${event.title}</h1>
                     <div id="content">
                         <br>
                         <div id="yt-player">
-                            <img src="res/youtube.png"/>
+                            <img src="res/yt.jpg"/>
+
+                            <c:forEach var="video" items="${videos}">
+                                <iframe width="560" height="315" src="//www.youtube.com/embed/${video.id.videoId}" frameborder="0" allowfullscreen></iframe>
+                            </c:forEach>
+
                         </div>
+                        <img src="res/google_maps.jpg" width="500px"/>
                         <div id="mapcanvas">
                         </div>
                         </br>
                         <br>
+
+                        <img src="res/info.jpg" width="150px"/>
                         <div id="eventdetails">
                             <div>Tytuł: ${event.title}</div>
                             <div>Wystąpią:
@@ -58,7 +66,7 @@
                             <div>Nazwa miejsca: ${event.venueName}</div>
                             <div id="event_pictures">
                                 <c:forEach var="image" items="${event.images}">
-                                    <img id="event-thumbnail" src="${image.url}" height="200" width="200"/>
+                                    <img class="event-thumbnail" src="${image.url}" />
                                 </c:forEach>
                             </div>
                             <div>Opis: ${event.description}</div>

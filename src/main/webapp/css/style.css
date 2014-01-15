@@ -103,12 +103,11 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li, form, input, textarea {
     height: 400px;
 }
 
-#event-thumbnail {
-    width: 200px;
-    height: 200px;
+.event-thumbnail {
+    width: 100px;
+    height: 100px;
 }
 
-#s
-{
+.searchbox {
     width:500px;
 }

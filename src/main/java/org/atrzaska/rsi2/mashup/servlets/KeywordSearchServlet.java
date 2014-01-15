@@ -37,7 +37,8 @@ public class KeywordSearchServlet extends HttpServlet {
             com.evdb.javaapi.APIConfiguration.setEvdbPassword("wacha5656");
 
             // read query param
-            String query = request.getParameter("q");
+            //String query = request.getParameter("q");
+            String query = new String(request.getParameter("q").getBytes("iso-8859-1"), "UTF-8");
 
             // process string
             StringProcessor stringProcessor = new StringProcessor(query);

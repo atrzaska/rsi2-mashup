@@ -29,35 +29,45 @@
                         <li><a href="popularEvents">Popularne wydarzenia</a></li>
                         <li><a href="eventsNearYou">Wydarzenia w twoim regionie</a></li>
                     </ul>
-                    
+
                 </div> <!-- .leftpanel -->
-                
+
 
                 <div class="rightpanel">
                     <br/>
-                    <form action="" method="GET">
+                    <form action="locationSearch" method="GET">
                         <div>
-                            Wyszukaj po miejscomości: 
+                            Wyszukaj po miejscomości:
                             <br/>
-                            <input id="s" type="text" name="miejscowosc" /><input value="Szukaj" type="submit" />
-                            <br/>     
-                            
+                            <input class="searchbox"  type="text" name="q" /><input value="Szukaj" type="submit" />
+                            <br/>
+
                         </div>
-                        </form>
+                    </form>
                     <br/>
-                    <form action="" method="GET">
+                    <form action="keywordSearch" method="GET">
                         <div>
-                            Wyszukaj po słowach kluczowych 
+                            Wyszukaj po słowach kluczowych
                             <br/>
-                            <input id="s" type="text" name="slowa_kluczowe" /><input value="Szukaj" type="submit" />
-                            <br/>     
-                            
+                            <input class="searchbox" type="text" name="q" /><input value="Szukaj" type="submit" />
+                            <br/>
+
                         </div>
-                        </form>
-                    
-                        
-                    
-                   
+                    </form>
+                    <br/>
+                    <form action="categorySearch" method="GET">
+                        <div>
+                            Wyszukaj po słowach kategorii
+                            <br/>
+                            <input class="searchbox" type="text" name="q" /><input value="Szukaj" type="submit" />
+                            <br/>
+
+                        </div>
+                    </form>
+
+
+
+
                 </div> <!-- .rightpanel -->
             </div> <!-- #content -->
             <!--DO NOT Remove The Footer Links-->
