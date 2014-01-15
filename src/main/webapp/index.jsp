@@ -27,7 +27,7 @@
                     <ul>
                         <li style="border-top: medium none;"><a href="index.jsp">Strona główna</a></li>
                         <li><a href="popularEvents">Popularne wydarzenia</a></li>
-                        <li><a href="eventsNearYou">Wydarzenia w twoim regionie</a></li>
+                        <li><a href="scanLocation.jsp">Wydarzenia w twoim regionie</a></li>
                     </ul>
 
                 </div> <!-- .leftpanel -->

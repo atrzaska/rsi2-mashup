@@ -30,8 +30,9 @@ public class LocationSearchServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-        request.setCharacterEncoding("UTF-8");
         try {
+            request.setCharacterEncoding("UTF-8");
+
             // set api key
             com.evdb.javaapi.APIConfiguration.setApiKey("wfRjDLRTfp3tsS7X");
             com.evdb.javaapi.APIConfiguration.setEvdbUser("karthaxx");

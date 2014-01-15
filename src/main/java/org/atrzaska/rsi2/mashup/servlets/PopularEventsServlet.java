@@ -24,6 +24,8 @@ public class PopularEventsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
         try {
+            request.setCharacterEncoding("UTF-8");
+
             // set api key
             com.evdb.javaapi.APIConfiguration.setApiKey("wfRjDLRTfp3tsS7X");
             com.evdb.javaapi.APIConfiguration.setEvdbUser("karthaxx");

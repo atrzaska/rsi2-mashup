@@ -1,5 +1,4 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,26 +29,11 @@
                         <li><a href="popularEvents">Popularne wydarzenia</a></li>
                         <li><a href="scanLocation.jsp">Wydarzenia w twoim regionie</a></li>
                     </ul>
+
                 </div> <!-- .leftpanel -->
 
                 <div class="rightpanel">
-                    <h1 class="title">Wyniki wyszukiwania</h1>
-
-                    <c:forEach var="event" items="${events}">
-                        <div id="eventdetails">
-                            <div>Tytuł: <a href="eventDetails?seid=${event.seid}">${event.title}</a></div>
-                            <div>Wystąpią:
-                                <c:forEach var="performer" items="${event.performers}">
-                                    ${performer.name}<br />
-                                </c:forEach>
-                            </div>
-                            <div>Czas rozpoczęcia: ${event.startTime}</div>
-                            <div>Kraj: ${event.venueCountry}</div>
-                            <div>Miasto: ${event.venueCity}</div>
-                            <div>Adres: ${event.venueAddress}</div>
-                            <div>Nazwa miejsca: ${event.venueName}</div>
-                        </div>
-                    </c:forEach>
+                    <div id="mapcanvas"></div>
                 </div> <!-- .rightpanel -->
             </div> <!-- #content -->
             <!--DO NOT Remove The Footer Links-->
@@ -72,5 +56,35 @@
     <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/slimbox2.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>-->
+    <script>
+        // Note: This example requires that you consent to location sharing when
+        // prompted by your browser. If you see a blank space instead of the map, this
+        // is probably because you have denied permission for location sharing.
+
+        function initialize() {
+            var map = new google.maps.Map(document.getElementById('mapcanvas'), { zoom: 15 });
+            var geocoder = new google.maps.Geocoder();
+
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                var infowindow = new google.maps.InfoWindow({
+                    map: map, position: latlng, content: 'Location found using html5.'
+                });
+
+                // center map
+                map.setCenter(latlng);
+                
+                geocoder.geocode({'latLng': latlng}, function(results, status) {
+                    var state = results[7].formatted_address;
+                    var url = "locationSearch?q=" + state;
+                    window.location.replace(url);
+                });
+            });
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 </body>
 </html>

@@ -28,7 +28,7 @@
                     <ul>
                         <li style="border-top: medium none;"><a href="index.jsp">Strona główna</a></li>
                         <li><a href="popularEvents">Popularne wydarzenia</a></li>
-                        <li><a href="eventsNearYou">Wydarzenia w twoim regionie</a></li>
+                        <li><a href="scanLocation.jsp">Wydarzenia w twoim regionie</a></li>
                     </ul>
                 </div> <!-- .leftpanel -->
 
@@ -97,6 +97,7 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/slimbox2.js"></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
     <script>
         $(function() {
             var latlng = new google.maps.LatLng(${event.venueLatitude}, ${event.venueLongitude});
