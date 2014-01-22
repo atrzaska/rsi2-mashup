@@ -15,7 +15,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -28,7 +27,7 @@ import org.atrzaska.rsi2.mashup.string.RemoveSpecialCharactersTransform;
 import org.atrzaska.rsi2.mashup.string.StringProcessor;
 import org.atrzaska.rsi2.mashup.youtube.Auth;
 
-@WebServlet(name = "EventDetailsServlet", urlPatterns = {"/eventDetails"})
+//@WebServlet(name = "EventDetailsServlet", urlPatterns = {"/eventDetails"})
 public class EventDetailsServlet extends HttpServlet {
     private static final long NUMBER_OF_VIDEOS_RETURNED = 2;
 

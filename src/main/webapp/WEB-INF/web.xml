@@ -9,4 +9,59 @@
             30
         </session-timeout>
     </session-config>
+
+    <servlet>
+        <servlet-name>CategorySearchServlet</servlet-name>
+        <servlet-class>org.atrzaska.rsi2.mashup.servlets.CategorySearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CategorySearchServlet</servlet-name>
+        <url-pattern>/categorySearch</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EventDetailsServlet</servlet-name>
+        <servlet-class>org.atrzaska.rsi2.mashup.servlets.EventDetailsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EventDetailsServlet</servlet-name>
+        <url-pattern>/eventDetails</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EventsNearYouServlet</servlet-name>
+        <servlet-class>org.atrzaska.rsi2.mashup.servlets.EventsNearYouServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EventsNearYouServlet</servlet-name>
+        <url-pattern>/eventsNearYou</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>KeywordSearchServlet</servlet-name>
+        <servlet-class>org.atrzaska.rsi2.mashup.servlets.KeywordSearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>KeywordSearchServlet</servlet-name>
+        <url-pattern>/keywordSearch</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LocationSearchServlet</servlet-name>
+        <servlet-class>org.atrzaska.rsi2.mashup.servlets.LocationSearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LocationSearchServlet</servlet-name>
+        <url-pattern>/locationSearch</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PopularEventsServlet</servlet-name>
+        <servlet-class>org.atrzaska.rsi2.mashup.servlets.PopularEventsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PopularEventsServlet</servlet-name>
+        <url-pattern>/popularEvents</url-pattern>
+    </servlet-mapping>
+
 </web-app>

@@ -8,13 +8,9 @@
     <meta name="description" content="Zajevents - wydarzenia dla Ciebie">
     <meta name="author" content="Andrzej Trzaska Rafał Szypulewski">
     <meta name="keywords" content="Zajevents, events, mashup"/>
-    <link type="image/ico" rel="icon" href="css/favicon.ico" />
+    <link type="image/ico" rel="icon" href="/favicon.ico" />
 
     <!-- Le Stylesheets -->
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
-    <link type="text/css" rel="stylesheet" href="css/bootstrap-theme.min.css" />
-    <link type="text/css" rel="stylesheet" href="css/slimbox-style.css" />
-    <link type="text/css" rel="stylesheet" href="css/slimbox2.css" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -94,8 +90,6 @@
     <![endif]-->
 
     <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/slimbox2.js"></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
     <script>

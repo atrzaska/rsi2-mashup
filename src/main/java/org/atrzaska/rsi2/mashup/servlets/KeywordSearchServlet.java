@@ -12,7 +12,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -24,7 +23,7 @@ import org.atrzaska.rsi2.mashup.string.RemoveExtraSpacesTransform;
 import org.atrzaska.rsi2.mashup.string.RemoveSpecialCharactersTransform;
 import org.atrzaska.rsi2.mashup.string.StringProcessor;
 
-@WebServlet(name = "KeywordSearch", urlPatterns = {"/keywordSearch"})
+//@WebServlet(name = "KeywordSearch", urlPatterns = {"/keywordSearch"})
 public class KeywordSearchServlet extends HttpServlet {
 
     @Override
@@ -32,7 +31,7 @@ public class KeywordSearchServlet extends HttpServlet {
         throws ServletException, IOException {
         try {
             request.setCharacterEncoding("UTF-8");
-            
+
             // set api key
             com.evdb.javaapi.APIConfiguration.setApiKey("wfRjDLRTfp3tsS7X");
             com.evdb.javaapi.APIConfiguration.setEvdbUser("karthaxx");
